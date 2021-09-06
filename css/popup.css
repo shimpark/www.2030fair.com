@@ -1,0 +1,317 @@
+.grid {
+  *zoom: 1;
+}
+
+.grid:before, .grid:after {
+  content: '';
+  display: table;
+}
+
+.grid:after {
+  clear: both;
+}
+
+.sr-only {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  padding: 0;
+  word-break: keep-all;
+  white-space: nowrap;
+  color: transparent;
+  border: 0;
+  text-indent: -9999px;
+}
+
+.grid {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid .col {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.grid .col-right {
+  float: right;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table .table-cell {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Light"), local("NotoSans-Light"), url("../fonts/NotoSansKR-Light.eot"), url("../fonts/NotoSansKR-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Light.woff2") format("woff2"), url("../fonts/NotoSansKR-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"), url("../fonts/NotoSansKR-Regular.eot"), url("../fonts/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"), url("../fonts/NotoSansKR-Medium.eot"), url("../fonts/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/NotoSansKR-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"), url("../fonts/NotoSansKR-Bold.eot"), url("../fonts/NotoSansKR-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Noto Sans Black"), local("NotoSans-Black"), url("../fonts/NotoSansKR-Black.eot"), url("../fonts/NotoSansKR-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Black.woff2") format("woff2"), url("../fonts/NotoSansKR-Black.woff") format("woff");
+}
+
+html {
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, option, img, div {
+  margin: 0;
+  padding: 0;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1100px) {
+  img {
+    width: auto;
+  }
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+select,
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="submit"],
+input[type="rest"],
+input[type="button"],
+textarea {
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+em, address {
+  font-style: normal;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  empty-cells: show;
+  table-layout: fixed;
+}
+
+legend, caption {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong, em {
+  font-weight: bold;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+.popup-dimmed {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1004;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-notice {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 1005;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 720px) {
+  .popup-notice {
+    max-width: 620px;
+  }
+}
+
+.popup-notice .popup-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 3;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.popup-notice .popup-close {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.popup-notice .popup-close:before, .popup-notice .popup-close:after {
+  content: '';
+  display: block;
+  width: 140%;
+  height: 1px;
+  background: #020202;
+}
+
+.popup-notice .popup-close:before {
+  margin-top: -0.25px;
+  margin-left: 0.5px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.popup-notice .popup-close:after {
+  margin-left: -41%;
+  margin-top: -1px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.popup-notice .popup-btn {
+  background-color: #2d51d6;
+  padding: 1.25rem;
+}
+
+.popup-notice .popup-btn a {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.popup-notice .popup-cont {
+  padding: 4.6875rem 1.25rem 1.5625rem;
+}
+
+@media screen and (min-width: 720px) {
+  .popup-notice .popup-cont {
+    padding: 150px 40px 50px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .popup-notice .popup-cont {
+    padding-top: 50px;
+  }
+}
+
+.popup-notice .popup-cont .tit {
+  font-size: 1.9rem;
+  color: #2d51d6;
+  line-height: 1.3;
+}
+
+.popup-notice .popup-cont .txt {
+  padding-top: 2rem;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+/*# sourceMappingURL=popup.css.map */

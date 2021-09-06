@@ -1,0 +1,26 @@
+#wrap {
+  .section-privacy {
+    *{letter-spacing:0;}
+    @include rem(padding-bottom,120px);
+    .wrap{
+      text-align:left;@include rem(padding, 0 30px);
+      @include breakpoint(desktop){
+        padding:0;
+      }
+    }
+    @include vw(26px);line-height:1.4;
+    @include breakpoint(desktop){
+        font-size: 18px;
+    }
+    h2.heading {
+        text-align: center;
+        & + p { @include rem(margin-top, 50px); }
+    }
+    p { @include rem(margin-top, 10px); }
+    ul { 
+      @include rem(margin, 20px); 
+      li{list-style:none;}
+    }
+    a:hover { text-decoration: underline; }
+  }
+}

@@ -1,0 +1,116 @@
+// display flex
+%flexCenter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-item: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+// clearfix
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// text ellipsis
+%textEllipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 0px;
+    height: 0px;
+    margin: -1px;
+    padding: 0;
+    word-break: keep-all;
+    white-space: nowrap;
+    color: transparent;
+    border: 0;
+    text-indent: -9999px;
+}
+
+
+.grid {
+    @extend %clearfix;
+    @include boxSizing(border-box);
+    .col {
+        float: left;
+        @include boxSizing(border-box);
+    }
+    .col-right {
+        float: right;
+        @include boxSizing(border-box);
+    }
+}
+
+.table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    .table-cell {
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+
+%disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+%slick-dots {
+    button {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 0px;
+        height: 0px;
+        margin: -1px;
+        padding: 0;
+        word-break: keep-all;
+        white-space: nowrap;
+        color: transparent;
+        border: 0;
+        text-indent: -9999px;
+    }
+}
+
+%slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    display: block;
+    margin:0;
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+    text-indent: -9999px;
+    border-width: 0;
+    border-style: solid;
+    @include transform(rotate(45deg) translateY(-50%));
+}

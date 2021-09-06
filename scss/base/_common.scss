@@ -1,0 +1,418 @@
+#wrap {
+    font-weight: normal;
+    line-height: 1;
+    * {
+        font-family: $font-noto;
+        @include breakpoint(desktop){
+            letter-spacing:0;
+        }
+    }
+
+    #container {
+        @extend %clearfix;
+        position: relative;
+    }
+
+    .container {
+        position: relative;
+        @extend %clearfix;
+    }
+
+    .only-mobile {
+        display: block;
+        @include breakpoint(desktop){
+            display: none;
+        }
+    }
+
+    .only-pc {
+        display: none;
+        @include breakpoint(desktop){
+            display: block;
+        }
+    }
+                                
+    .text-left{text-align:left !important;}
+    .text-center{text-align:center !important;}
+	.holder{position:relative;}
+
+    .disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: .5;
+        color: $color-5 !important;
+        border-color: $border-color-1 !important;
+    }
+
+    .form-control {
+        @include rem(margin-bottom, 20px);
+        text-align: left;
+        @include breakpoint(desktop){
+            margin-bottom: 10px;
+        }
+        // &:first-child { margin-top: 0; }
+        .text {
+            width: 100%;
+            @include rem(padding, 31px 10px);
+            @include vw(24px);
+            font-weight: normal;
+            color: $color-5;
+            letter-spacing: -.9px;
+            @include rem(border-width, 3px);
+            border-style: solid;
+            border-color: $bg-color-blue;
+            //@include rem(border-radius, 20px);
+            background-color: #fff;
+            @include boxSizing(border-box);
+            outline: none;
+            &::placeholder { color:  $bg-color-blue; }
+            @include breakpoint(desktop){
+                @include rem(padding, 21px 10px);
+                @include vw(20px);
+            }
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            margin: 0;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        input[type="number"] { -moz-appearance: textfield; }
+        .textarea {
+            width: 100%;
+            @include rem(height, 480px);
+            @include rem(padding, 20px 25px);
+            @include vw(28px);
+            @include breakpoint(desktop){
+                @include vw(20px);
+            }
+            font-weight: normal;
+            color: $color-3;
+            letter-spacing: -.9px;
+            // @include rem(border-width, 1px);
+            // border-style: solid;
+            // border-color: #adadad;
+            border:none;
+            @include rem(border-radius, 20px);
+            background-color: #dddddd;
+            @include boxSizing(border-box);
+            outline: none;
+            resize: none;
+            &::placeholder { color:$color-3; }
+        }
+
+        .select {
+            position:relative;
+            font-size: 0;display:block;border:2px solid #fa4b98;
+            @include bg($color: #fff, $url: '../img/common/icon_select_arrow.png', $position: 100% center, $size: 48px 48px);
+            background-color:#fef0e7;
+            @include breakpoint(desktop){
+                
+            }
+            select {
+                width: 100%;
+                @include rem(padding, 30px 10px);
+                line-height: 1;
+                @include vw(28px);
+                @include breakpoint(desktop){
+                    font-size:18px;
+                    @include rem(padding, 15px 10px);
+                }
+                font-weight: normal;
+                color: #dba989;
+                letter-spacing: -.9px;
+                border:none;
+                // @include rem(border-width, 2px);
+                // border-style: solid;
+                // border-color: #fa4b98;
+                //@include rem(border-radius, 20px);
+                // background-color: #fff;
+                @include boxSizing(border-box);
+                outline: none;
+                -webkit-appearance: none;
+                appearance: none;
+                @include boxSizing(border-box);
+                &::-ms-expand { display: none; }
+                &::placeholder { color: $color-6; }
+            }
+        }
+
+        .fake-checkbox {
+            @include vw(24px);
+            @include breakpoint(desktop){
+                @include vw(22px);
+            }
+            color: $color-5;
+            letter-spacing: -.66px;
+            text-align:left;
+            @include rem(margin-top, 10px);
+            input {
+                @extend .sr-only;
+                &:checked + label {
+                    background-image: url('../img/common/icon_checkbox_check.png');
+                }
+            }
+            label {
+                display: inline-block;
+                padding-left: 30px;
+                text-align: left;
+                background: url('../img/common/icon_checkbox.png') no-repeat left center;
+                line-height: 20px;
+                background-size: 20px;
+                cursor: pointer;
+                @include breakpoint(desktop){
+                    padding-left: 40px;
+                    line-height: 40px;
+                    background-size: 30px;
+                }
+            }
+        }
+
+        .fake-radio {
+            display: inline-block;
+            width: 24%;
+            margin: 0 .5%;
+            @include rem(margin-top, 10px);
+            @include rem(margin-bottom, 10px);
+            label {
+                display: block;
+                @include rem(padding, 23px 0);
+                text-align: center;
+                line-height: 1;
+                @include vw(30px);
+                color: $color-5;
+                letter-spacing: -.9px;
+                @include rem(border-width, 2px);
+                border-style: solid;
+                border-color: $border-color-1;
+                //@include rem(border-radius, 20px);
+                cursor: pointer;
+            }
+            input {
+                @extend .sr-only;
+                &:checked + label {
+                    color: #fff;
+                    border-color: $color-6;
+                    background-color: $color-6;
+                }
+            }
+        }
+
+        .text-byte {
+            @include rem(margin-top, 10px);
+            text-align: right;
+            @include vw(26px);
+            color: $color-5;
+        }
+
+        .btn {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 640px;
+            @include rem(padding, 34px 0);
+            text-align: center;
+            @include vw(24px);
+            font-weight: 700;
+            @include rem(border-width, 2px);
+            border-style: solid;
+            // background-color: #fff;
+            @include boxSizing(border-box);
+            @include breakpoint(desktop){
+                max-width: 100%;
+                font-size: 20px;
+                border-width: 1px;
+                @include rem(padding, 24px 0);
+            }
+
+            &.btn-primary {
+                color: #fff;
+                border-color: $bg-color-blue;
+                background-color: $bg-color-blue;
+            }
+        }
+
+        
+        &-array {
+            position:relative;
+            .text{
+                width:100%;
+                padding-right:160px;
+                border-radius:5px;
+                @include breakpoint(desktop){
+                    padding-right:210px;
+                }
+            }
+            a {
+                position:absolute !important;right:0;top:0;
+                width:150px !important;
+                @include rem(padding, 25px 0);
+                @include vw(24px);
+                border-top-right-radius:5px;
+                border-bottom-right-radius:5px;
+                @include breakpoint(desktop){
+                    font-size: 20px;width:200px !important;
+                }
+            }
+        }
+    }
+
+    .fake-file-box {
+        @extend %clearfix;
+        @include rem(margin-top, 10px);
+        &:first-child { margin-top: 0; }
+        .fake-file-name {
+            float: left;
+            width: 75%;
+            @include rem(padding, 20px 10px);
+            @include vw(28px);
+            border:1px solid #adadad;
+            @include breakpoint(desktop){
+                padding: 10px;
+                font-size: 18px;
+            }
+        }
+        .fake-file {
+            float: right;
+            width: calc(25% - 9px);
+            input[type="file"] { @extend .sr-only; }
+            label {
+                display: block;
+                @include rem(padding, 30px 0);
+                text-align: center;
+                @include vw(28px);
+                color: #fff;
+                @include rem(border-radius, 5px);
+                background-color: $bg-color-black;
+                cursor: pointer;
+                @include breakpoint(desktop){
+                    padding: 17px 0;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .form-action {
+        @include rem(margin-top, 20px);
+        @include breakpoint(desktop){
+            margin-top: 10px;
+        }
+        .btn { width: 100%; }
+    }
+
+    .form-terms {
+        width: 100%;
+        @include rem(height, 240px);
+        @include rem(margin-top, 17px);
+        @include rem(padding, 20px);
+        text-align: left;
+        line-height: 1.5;
+        @include vw(24px);
+        @include breakpoint(desktop){
+            font-size:14px;
+        }
+        color: $color-black;
+        letter-spacing: -.6px;
+        @include rem(border-width, 1px);
+        border-style: solid;
+        border-color: #adadad;
+        //@include rem(border-radius, 20px);
+        @include boxSizing(border-box);
+        overflow-y: auto;
+        & + .form-control { text-align: right; }
+        p { @include rem(margin, 10px  0 10px 10px); }
+        ul {
+            @include rem(margin, 10px  0 10px 10px);
+            & + p { margin-top: 40px; }
+        }
+    }
+
+    .action {
+        font-size:0;
+        @include rem(margin-top, 50px);
+        @include breakpoint(desktop){
+            @include rem(margin-top, 40px);
+        }
+        a{
+            @include rem(margin-right, 10px);
+            @include rem(margin-bottom, 10px);
+            &:nth-child(2n){margin-right:0;}
+            
+            &.full{
+                margin-right:0;
+                @include rem(margin-bottom, 30px);
+            }
+    
+            position:relative;
+            &:after{
+                @include arrow(right, 8px, 8px, 2px, $color-white);
+                right:7%;
+                margin-top:-5px;
+                @include breakpoint(foldMobile){
+                    right:5%;
+                }
+            }
+            
+        }
+    }
+
+    .btn {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        line-height: 1.4;
+        @include boxSizing(border-box);
+        vertical-align:middle;
+        
+        &-bg {
+            color: #fff;font-weight:700;
+            letter-spacing: -.78px;
+            border-radius: 5px;
+            background-color: $color-blue-1;
+            @include vw(24px);
+            width:49%;text-align:left;
+            @include rem(padding, 26px 0 26px 50px);
+            &.wide{
+                width:100%;
+                @include rem(padding, 36px 0);
+                text-align:center;
+            }
+
+            @include breakpoint(foldMobile){
+                text-align:center;
+                padding-left:0;
+                @include vw(18px);
+               
+            }
+
+
+
+            @include breakpoint(desktop){
+                &.wide{
+                    width:49%;
+                    @include rem(padding, 26px 0);
+                }
+            }
+
+
+        }
+
+        &-linear {
+            @include rem(padding, 23px 0);
+            @include vw(30px);
+            font-weight: bold;
+            color: $color-6;
+            letter-spacing: -.9px;
+            @include rem(border-width, 2px);
+            border-style: solid;
+            border-color: $color-6;
+            @include rem(border-radius, 20px);
+            background-color: #fff;
+            
+        }
+
+        
+    }
+}
