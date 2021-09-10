@@ -7760,18 +7760,8 @@ q:before, q:after {
   #wrap .section-tab.zone .tab-box .tab-list li {
     position: relative;
     border-bottom: 1px solid #e8e8e8;
-  }
-  #wrap .section-tab.zone .tab-box .tab-list li:before {
-    content: '';
-    position: absolute;
-    left: -15px;
-    bottom: -2px;
-    width: 15px;
-    height: 1px;
-    background-color: #e8e8e8;
-  }
-  #wrap .section-tab.zone .tab-box .tab-list li:nth-child(1):before, #wrap .section-tab.zone .tab-box .tab-list li:nth-child(6):before {
-    display: none;
+    width: 20%;
+    margin-right: 0;
   }
 }
 
