@@ -6651,14 +6651,36 @@ q:before, q:after {
   }
 }
 
+#wrap .title {
+  position: relative;
+}
+
 #wrap .title h3 {
   font-size: 5.55556vw;
+}
+
+#wrap .title .write-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: inline-block;
+  padding: 10px 0;
+  width: 125px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #3483D2;
+  text-align: center;
+  border: 1px solid #3483D2;
+  border-radius: 2rem;
 }
 
 @media screen and (min-width: 720px) {
   #wrap .title h3 {
     font-size: 40px;
   }
+
 }
 
 #wrap .title p {

@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+#wrap .title h3 {
+    font-size: 5.55556vw;
+  }
+  
+  #wrap .title .write-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: inline-block;
+    padding: 10px 0;
+    width: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #3483D2;
+    text-align: center;
+    border: 1px solid #3483d2;
+    border-radius: 2rem;
+  }
+  
+  @media screen and (min-width: 720px) {
+    #wrap .title h3 {
+      font-size: 40px;
+    }
+    #wrap .title .write-btn {
+      width: 125px;
+      font-size: 16px;
+      border-width: 2px;
+    }
+    
+  }
+
+#wrap .btn.md {
+    width: 49%;
+}
+#wrap .btn-bg.secondary {
+    background-color: #8b95a1;
+}
+#wrap .section-view .action-multi .btn {
+    margin-right: 2%;
+}
+#wrap .section-view .action-multi .btn:last-child {
+    margin-right: 0;
+}
+
+@media screen and (min-width: 720px) {
+    #wrap .btn.md {
+        width: 310px;
+    }
+    #wrap .section-view .action-multi .btn {
+        margin-right: 10px;
+    }    
+}
+
+.popup-edit .action {
+    padding: 0 30px;
+}
+#wrap .popup-edit .btn {
+    width: 100%;
+}
+.popup-txt {
+    font-size: 15px;
+}
+.popup-edit  .join-input .form-list .form-text {
+    width: 100px !important;
+}
+.popup-edit  .join-input .form-list .form-control {
+    width: calc(100% -  100px) !important;
+}
+
+@media screen and (min-width: 720px) {
+    .popup-edit .action {
+        padding: 0 60px;
+    }
+    .popup-txt {
+        font-size: 20px;
+    }
+}
+
+.submit-input {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #e8e8e8;
+}
+.submit-input .form-list {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.submit-input .form-list + .form-list {
+    margin-top: 10px;
+}
+.submit-input .form-list .form-text {
+    width: 80px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #020202;
+    text-align: left;
+    font-size: 3.88889vw;
+    font-weight: 400;
+}
+.submit-input .form-list .form-control {
+    width: calc(100% - 80px);
+}
+#wrap .submit-input .form-list .form-control {
+    margin-bottom: 0;
+}
+.submit-input .form-list .form-control .text {
+    padding: 10px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 3.88889vw;
+    border-color: #e8e8e8 !important;
+    border-width: 1px !important;
+}
+.submit-input .form-list .form-control .textarea {
+    padding: 10px;
+    line-height: 1.4;
+    font-size: 3.88889vw;
+    height: 250px;
+    background-color: #fff !important;
+    border: 1px solid #e8e8e8 !important;
+    border-radius: 0 !important;
+}
+
+.submit-input .form-list .form-file-control {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#wrap .submit-input .form-list .form-file-control .text {
+    width: calc(100% - 105px);
+}
+.submit-input .form-list .form-file-control .form-file-btn {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 3.88889vw;
+    text-align: center;
+    color: #fff;
+    background-color: #3483d2;
+}
+.submit-input .form-list .form-file-control .form-file-btn input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.submit-input .form-list .form-file-control .form-file-btn .label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.form-desc {
+    padding-top: 5px;
+    font-size: 14px;
+    color: #8b95a1;
+}
+
+@media screen and (min-width: 720px) {
+    .submit-input {
+        padding-top: 40px;
+        margin-top: 40px;
+    }
+    .submit-input .form-list + .form-list {
+        margin-top: 20px;
+    }
+    .submit-input .form-list .form-text {
+        width: 120px;
+        font-size: 20px;
+    }
+    .submit-input .form-list .form-control {
+        width: calc(100% - 120px);
+    }
+    .submit-input .form-list .form-control .text {
+        font-size: 20px;
+    }
+    .submit-input .form-list .form-control .textarea {
+        height: 550px;
+    }
+    #wrap .submit-input .form-list .form-file-control .text {
+        width: calc(100% - 165px);
+    }
+    .submit-input .form-list .form-file-control .form-file-btn {
+        width: 160px;
+       font-size: 20px;
+    }
+    .form-desc {
+        padding-top: 10px;
+        font-size: 16px;
+    }
+}
